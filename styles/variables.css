@@ -1,1 +1,65 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+--Inter: "Inter-Variable", sans-serif; 
+--PressStart2P: "PressStart2P", sans-serif;
+--menu-font-weight: 400;
+--menu-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+--menu-list-font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+--width-content: var(--desktop-content, 100%);
+
+/* для desktop */
+--desktop-content: 100%;
+
+/* для mobile */
+--mobile-content: 100%;
+
+ 
+/* Светлая тема */
+--card-content-width-light: 400;
+--card-title-width-light: 700;
+--background-color-light: #ffffff;
+--accent-color-light: #000000;
+--background-image-light: repeating-linear-gradient(
+  #d3d3d3,
+  #d3d3d3 2px,
+  transparent 2px,
+  transparent 4px
+),
+repeating-linear-gradient(
+  90deg,
+  #d3d3d3,
+  #d3d3d3 2px,
+  transparent 2px,
+  transparent 4px
+),
+linear-gradient(
+  #e7e7e7 0.01%,
+  #1a1a1a
+  );
+
+/* Тёмная тема */
+--card-content-width-dark: 465;
+--card-title-width-dark: 785;
+--background-color-darck: #000000;
+--accent-color-darck: #00CC14;
+--background-image-dark: repeating-linear-gradient(
+  #000,
+  #000 2px,
+  transparent 2px,
+  transparent 4px
+),
+repeating-linear-gradient(
+  90deg,
+  #000,
+  #000 2px,
+  transparent 2px,
+  transparent 4px
+),
+linear-gradient(
+  #007f0c,
+  #004306
+  );
+}
+
+
+
