@@ -138,6 +138,17 @@
   font-family: var(--PressStart2P, sans-serif);
   font-size: 14px;
   font-weight: 400;
+  mix-blend-mode:hard-light;
+  text-shadow: -1px 0 var(--card__label-shadow, #ffffff50),
+  0 1px var(--card__label-shadow, #ffffff50),
+  1px 0 var(--card__label-shadow, #ffffff50),
+  0 -1px var(--card__label-shadow, #ffffff50);
+}
+
+@supports (-webkit-text-stroke: 1px var(--card__label-shadow, #ffffff50)) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--card__label-shadow, #ffffff50);
+  }
 }
 
 .image {

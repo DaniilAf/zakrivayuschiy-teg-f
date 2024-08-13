@@ -5,6 +5,7 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 :root.theme-dark {
+  --card__label-shadow: var(--card__label-shadow-dark, #00000050);
   --card-title-width: var(--card-title-width-dark, 785);
   --card-content: var(--card-content-width-dark, 465);
   --background-color: var(--background-color-darck, #000000);
@@ -29,6 +30,7 @@
 }
 
 :root.theme-light {
+  --card__label-shadow: var(--card__label-shadow-light, #ffffff50);
   --card-title-width: var(--card-title-width-light, 700);
   --card-content: var(--card-content-width-light, 400);
   --background-color: var(--background-color-light, #ffffff);
@@ -54,6 +56,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --card__label-shadow: var(--card__label-shadow-dark, #00000050);
     --card-title-width: var(--card-title-width-dark, 785);
     --card-content: var(--card-content-width-dark, 465);
     --background-color: var(--background-color-darck, #000000);

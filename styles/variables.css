@@ -15,6 +15,7 @@
 
  
 /* Светлая тема */
+--card__label-shadow-light: #ffffff50;
 --card-content-width-light: 400;
 --card-title-width-light: 700;
 --background-color-light: #ffffff;
@@ -38,6 +39,7 @@ linear-gradient(
   );
 
 /* Тёмная тема */
+--card__label-shadow-dark: #00000050;
 --card-content-width-dark: 465;
 --card-title-width-dark: 785;
 --background-color-darck: #000000;
