@@ -97,13 +97,48 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  position: relative;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: currentColor;
+  opacity: 0.6;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scale(1);
+}
+
+.theme-menu__button:focus {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  inset-inline-start: -15px;
+  animation: menu_arrow 0.5s ease-in-out alternate infinite;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 /* блок header */
