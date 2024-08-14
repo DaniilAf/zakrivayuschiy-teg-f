@@ -117,11 +117,11 @@
 
 .theme-menu__button:focus {
   opacity: 0.6;
+  outline: none;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
-.theme-menu__button:focus {
-  outline: none;
-}
 
 .theme-menu__button:disabled::before {
   content: "▶";
@@ -219,8 +219,10 @@
   font-family: var(--PressStart2P, sans-serif);
   font-size: 14px;
   cursor: pointer;
+  position: relative;
 }
 
+.button-save,
 .card__icon-button {
   background-color: transparent;
   border: none;
@@ -229,26 +231,89 @@
 
 /* блок main */
 /* блок футер */
-.footer__button {
+.button-save {
   display: flex;
   border: 2px solid;
+  align-items: center;
+  justify-content: center;
   border-color: var(--accent-color, #000000);
   background-color: var(--background-color, #ffffff);
   min-width: 335px;
   min-height: 55px;
   font-family: var(--PressStart2P, sans-serif);
   font-size: 14px;
-  padding: 15px 21px 15px 19px;
   margin-block-end: 100px;
   cursor: pointer;
+  position: relative;
 }
-
 
 .floppy-disk {
   width: 21px;
   height: 21px;
+  margin-inline-end: 8px;
 }
+
+.button-save:focus,
+.card__like-button:focus {
+  box-shadow: 2px 2px 0;
+  outline: none;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.button-save:focus-visible,
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+
+
+
+.button-save::before,
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-inline-start: -35px;
+  margin-block-start: -10px;
+  background-color: var(--accent-color);
+  transform: scale(0,1);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-save::before {
+  margin-inline-start: 0;
+  margin-block-start: 0;
+}
+
+@media ((hover:hover) and (pointer:fine)) {
+  .button-save:hover::before,
+  .card__like-button:hover::before {
+    transform: scale(1,1);
+  }
+}
+
+
 /* блок футер */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* фильтры */
@@ -295,12 +360,9 @@
       min-height: 760px;
     }
 
-    .footer__button {
+    .button-save {
       min-width: 306px;
       min-height: 84px;
-    }
-
-    .card__icon-button {
       display: flex;
       flex-direction: column;
       align-items: center;
