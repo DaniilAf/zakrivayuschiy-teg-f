@@ -28,6 +28,8 @@
     #007f0c,
     #004306
     ));
+
+    --contour-icon-herat: var(--line-icon-herat-darck, #00CC14);
 }
 
 :root.theme-light {
@@ -54,11 +56,13 @@
     #e7e7e7 0.01%,
     #1a1a1a
     ));
+
+    --contour-icon-herat: var(--line-icon-herat-light, #000000);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --button-text-color: var(--button-text-color-dark, #00CC14;);
+    --button-text-color: var(--button-text-color-dark, #00CC14);
     --card__label-shadow: var(--card__label-shadow-dark, #00000050);
     --card-title-width: var(--card-title-width-dark, 785);
     --card-content: var(--card-content-width-dark, 465);
@@ -81,5 +85,8 @@
       #007f0c,
       #004306
       ));
+  
+      --contour-icon-herat: var(--line-icon-herat-darck, #00CC14);
   }
-  }
+}
+  

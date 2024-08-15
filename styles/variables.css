@@ -38,6 +38,7 @@ linear-gradient(
   #e7e7e7 0.01%,
   #1a1a1a
   );
+  
 
 /* Тёмная тема */
 --button-text-color-dark : #00CC14;
@@ -63,7 +64,16 @@ linear-gradient(
   #007f0c,
   #004306
   );
+
+  /* цвета для иконки сердца */
+  --sparks-icon-herat: #FF0000;
+
+/* Светлая тема */
+--contour-icon-herat-light: #000000;
+
+/* Тёмная тема */
+--contour-icon-herat-darck: #00CC14;
+
+/* цвета для иконки сердца */
+
 }
-
-
-
