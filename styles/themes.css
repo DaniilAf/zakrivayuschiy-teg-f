@@ -6,7 +6,7 @@
 */
 :root.theme-dark {
   --button-text-color: var(--button-text-color-dark, #00CC14);
-  --card__label-shadow: var(--card__label-shadow-dark, #00000050);
+  --card__label-shadow: var(--card__label-shadow-dark, #000000);
   --card-title-width: var(--card-title-width-dark, 785);
   --card-content: var(--card-content-width-dark, 465);
   --background-color: var(--background-color-darck, #000000);
@@ -34,7 +34,7 @@
 
 :root.theme-light {
   --button-text-color: var(--button-text-color-light, #ffffff);
-  --card__label-shadow: var(--card__label-shadow-light, #ffffff50);
+  --card__label-shadow: var(--card__label-shadow-light, #ffffff);
   --card-title-width: var(--card-title-width-light, 700);
   --card-content: var(--card-content-width-light, 400);
   --background-color: var(--background-color-light, #ffffff);
@@ -63,7 +63,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --button-text-color: var(--button-text-color-dark, #00CC14);
-    --card__label-shadow: var(--card__label-shadow-dark, #00000050);
+    --card__label-shadow: var(--card__label-shadow-dark, #000000);
     --card-title-width: var(--card-title-width-dark, 785);
     --card-content: var(--card-content-width-dark, 465);
     --background-color: var(--background-color-darck, #000000);

@@ -20,7 +20,7 @@
   align-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--Inter, sans-serif);
+  font-family: var(--main-font, sans-serif);
   font-variation-settings: var(--card-content, 400);
   background-color: var(--background-color, #ffffff);
   background-attachment: scroll;
@@ -58,19 +58,23 @@
   border: 2px solid;
   border-color: var(--accent-color, #000000);
   background-color: var(--background-color, #fff);
-  font-family: var(--PressStart2P, sans-serif);
+  font-family: var(--accent-font, sans-serif);
   min-width: var(--width-content, 100%);
   margin-block-end: 100px;
-  min-height: 368px;
+  padding-block-start: 136px;
+  block-size: 100%;
 }
 
 .menu-title {
+  text-decoration: none;
+  outline:none;
   padding-block-end: 20px;
   font-weight: var(--menu-font-weight, 400);
   font-size: var(
     --menu-font-size,
     clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem)
   );
+  text-transform: uppercase;
 }
 
 .menu-title-teg {
@@ -103,6 +107,7 @@
   border: none;
   background-color: transparent;
   position: relative;
+  transition-duration: 0.3s;
 }
 
 .theme-menu__button::after {
@@ -123,7 +128,6 @@
 .theme-menu__button:focus {
   opacity: 0.6;
   outline: none;
-  transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
@@ -136,7 +140,6 @@
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
@@ -158,11 +161,11 @@
 }
 
 .card-title {
-  min-height: 31px;
   font-weight: var(--card-title-width, 400);
   font-size: 18px;
   padding-inline: 10px;
   padding-block: 3px;
+  line-height: 22px;
 }
 
 .image-container {
@@ -173,19 +176,20 @@
   position: absolute;
   inset-inline-end: 25px;
   inset-block-start: 25px;
-  font-family: var(--PressStart2P, sans-serif);
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   font-weight: 400;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--card__label-shadow, #ffffff50),
-    0 1px var(--card__label-shadow, #ffffff50),
-    1px 0 var(--card__label-shadow, #ffffff50),
-    0 -1px var(--card__label-shadow, #ffffff50);
+  text-shadow: -1px 0 var(--card__label-shadow, #ffffff),
+    0 1px var(--card__label-shadow, #ffffff),
+    1px 0 var(--card__label-shadow, #ffffff),
+    0 -1px var(--card__label-shadow, #ffffff);
+    opacity: 50%;
 }
 
-@supports (-webkit-text-stroke: 1px var(--card__label-shadow, #ffffff50)) {
+@supports (-webkit-text-stroke: 1px var(--card__label-shadow, #ffffff)) {
   .card__label {
-    -webkit-text-stroke: 1px var(--card__label-shadow, #ffffff50);
+    -webkit-text-stroke: 1px var(--card__label-shadow, #ffffff);
   }
 }
 
@@ -212,6 +216,11 @@
   margin-block-end: 25px;
   margin-inline-end: 25px;
   height: 38px;
+  background-color: transparent;
+}
+
+.button style {
+
 }
 
 .like-button-contener {
@@ -224,11 +233,12 @@
   border-color: var(--accent-color, #000000);
   block-size: 100%;
   width: 130px;
-  font-family: var(--PressStart2P, sans-serif);
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   cursor: pointer;
 }
 
+.card__like-button
 .dialog-button,
 .button-save,
 .card__icon-button {
@@ -256,7 +266,7 @@
   background-color: var(--background-color, #ffffff);
   min-width: 335px;
   min-height: 55px;
-  font-family: var(--PressStart2P, sans-serif);
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   margin-block-end: 100px;
   cursor: pointer;
@@ -350,6 +360,7 @@
 
 .like-icon.is-liked .heart {
   animation: heart-scale 0.3s 0.1s ease-in alternate;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
@@ -359,7 +370,8 @@
 @media (width <= 375px) {
   .header {
     min-width: var(--mobile-content, 100%);
-    min-height: 327px;
+    block-size: 100%;
+    padding-block-start: 120px;
   }
 
   .card {
@@ -473,7 +485,7 @@
   inset: 0;
   border: 2px solid;
   color: var(--accent-color, #000000);
-  font-family: var(--PressStart2P, sans-serif);
+  font-family: var(--accent-font, sans-serif);
   font-weight: var(--menu-font-weight, 400);
   font-size: 14px;
   line-height: 21px;

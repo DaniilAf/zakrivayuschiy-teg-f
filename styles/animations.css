@@ -33,11 +33,9 @@
 
 @keyframes heart-scale {
   0% {
-    transform-origin: center;
     scale: 1;
   }
   100% {
-    transform-origin: center;
     scale: 1.5;
   }
 }

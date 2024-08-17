@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
---Inter: "Inter-Variable", sans-serif; 
---PressStart2P: "PressStart2P", sans-serif;
+--main-font: "Inter-Variable", sans-serif; 
+--accent-font: "PressStart2P", sans-serif;
 --menu-font-weight: 400;
 --menu-font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
 --menu-list-font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
@@ -16,7 +16,7 @@
  
 /* Светлая тема */
 --button-text-color-light : #ffffff;
---card__label-shadow-light: #ffffff50;
+--card__label-shadow-light: #ffffff;
 --card-content-width-light: 400;
 --card-title-width-light: 700;
 --background-color-light: #ffffff;
@@ -42,7 +42,7 @@ linear-gradient(
 
 /* Тёмная тема */
 --button-text-color-dark : #00CC14;
---card__label-shadow-dark: #00000050;
+--card__label-shadow-dark: #000000;
 --card-content-width-dark: 465;
 --card-title-width-dark: 785;
 --background-color-darck: #000000;
