@@ -23,7 +23,7 @@
   font-family: var(--main-font, sans-serif);
   font-variation-settings: var(--card-content, 400);
   background-color: var(--background-color, #ffffff);
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
   background-image: var(
     --background-image,
@@ -128,7 +128,6 @@
 .theme-menu__button:focus {
   opacity: 0.6;
   outline: none;
-  transition-timing-function: ease;
 }
 
 .theme-menu__button:disabled::before {
@@ -140,7 +139,6 @@
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition-timing-function: ease;
 }
 
 .theme-menu__button:disabled {
@@ -196,6 +194,7 @@
 @supports (-webkit-text-stroke: 1px var(--card__label-shadow, #ffffff)) {
   .card__label {
     -webkit-text-stroke: 1px var(--card__label-shadow, #ffffff);
+    text-shadow: none;
   }
 }
 
@@ -277,7 +276,7 @@
 .button-focus:focus,
 .button-focus-visible:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color, #000000);
 }
 
 .button-before::before {
@@ -285,7 +284,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000000);
   transform: scale(0, 1);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
