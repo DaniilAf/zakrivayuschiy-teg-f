@@ -204,8 +204,6 @@
   inline-size: 100%;
   aspect-ratio: 1 / 1;
   outline: 2px solid;
-  max-height: 696px;
-  
 }
 
 .card-content {
