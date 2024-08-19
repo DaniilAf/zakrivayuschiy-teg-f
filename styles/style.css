@@ -165,7 +165,7 @@
 }
 
 .card-title {
-  font-variation-settings: 'wght' var(--card-title-width, 400);
+  font-variation-settings: 'wght' var(--card-title-width, 700);
   font-size: 18px;
   padding-inline: 10px;
   padding-block: 5px;
@@ -382,6 +382,10 @@
     height: 30px;
     margin-inline-start: 10px;
   }
+}
+
+  .card__label {
+    inset-inline-end: 13px;
 }
 
 .card__icon-button:focus-visible {
