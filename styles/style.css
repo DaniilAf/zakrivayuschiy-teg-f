@@ -382,11 +382,12 @@
     height: 30px;
     margin-inline-start: 10px;
   }
-}
-
+  
   .card__label {
     inset-inline-end: 13px;
+  }
 }
+
 
 .card__icon-button:focus-visible {
   border: 2px solid;
